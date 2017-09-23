@@ -19,8 +19,8 @@ class Header extends Component {
               </div>
               <div id="navbar" className="navbar-collapse collapse">
                 <ul className="nav navbar-nav">
-                  <li className="active"><NavLink to="/">Home</NavLink></li>
-                  <li><NavLink to="/tasks">Tasks</NavLink></li>
+                  <li><NavLink exact to="/" activeClassName="activeNav">Home</NavLink></li>
+                  <li><NavLink to="/task"  activeClassName="activeNav">Task</NavLink></li>
                 </ul>
               </div>{/* <!--/.nav-collapse --> */}
             </div> {/*}<!--/.container-fluid --> */}

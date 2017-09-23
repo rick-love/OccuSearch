@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Home from './Home';
-import Tasks from './Tasks';
+import Task from './Task';
 import Header from './Header'
+import { DB_CONFIG } from './Config/config';
+import firebase from 'firebase/app';
 import registerServiceWorker from './registerServiceWorker';
 import {
   BrowserRouter,
@@ -14,13 +16,17 @@ import {
   Link
 } from 'react-router-dom';
 
+import createBrowserHistory from 'history/createBrowserHistory';
+
+const customHistory = createBrowserHistory();
+
 ReactDOM.render(
   <BrowserRouter>
     <div className="container">
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path='/Tasks' component={Tasks} />
+        <Route path='/Task' component={Task} history={customHistory} />
       </Switch>
     </div>
   </BrowserRouter>,
