@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TaskForm from "./TaskForm";
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 import 'firebase/database';
 import { DB_CONFIG } from './Config/config';
+import './App.css';
 
 class Task extends Component {
 
@@ -21,7 +22,7 @@ class Task extends Component {
       tasks: [],
     }
 
-    // this.taskContent = props.taskContent;
+    this.taskContent = props.taskContent;
     this.taskId = props.taskId;
     this.key = props.taskId;
 
@@ -65,7 +66,19 @@ class Task extends Component {
   }
 
   handleRemoveTask(id){
-    this.props.removeTask(id);
+
+    var removeTaskData = firebase.database().ref('tasks/'+id);
+    console.log(id);
+    removeTaskData.remove()
+    .then(function() {
+      console.log("remove success")
+    })
+    .catch(function(error) {
+      console.log("Remove failed" + error.message)
+    })
+    this.setState({
+      tasks: this.state.tasks
+    });
   }
 
 
@@ -77,13 +90,15 @@ class Task extends Component {
           </div>
           <div className="taskBody">
           {
-            this.state.tasks.map((task) => {
+            this.state.tasks.map((task, key) => {
               return (
-                <div>{task.taskContent}{task.Id}{this.removeTask}
-                <span className="closebtn"
-                  onClick={() => this.handleRemoveTask(this.taskId)}>
-                  &times;
-                  </span>
+                <div className="taskContent"
+                key={task.id}>
+                {task.taskContent}
+                <div className="closebtn"
+                  onClick={() => this.handleRemoveTask(task.id)}>
+                  X
+                  </div>
                   </div>
               );
             })
@@ -100,7 +115,7 @@ class Task extends Component {
 }
 
 Task.propTypes = {
-  taskContent: PropTypes.string.isRequired
+  taskContent: PropTypes.string
 }
 
 export default Task;

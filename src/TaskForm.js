@@ -28,13 +28,13 @@ writeTask(){
 
 render(){
   return(
-    <div className="formWrapper">
+    <div className="taskFormWrapper">
       <input className="taskInput"
       placeholder="Enter a task...."
       value={this.state.newTaskContent}
       onChange={this.handleUserInput} />
       <button className="taskButton"
-      onClick={this.writeTask}>Add a Task</button>
+      onClick={this.writeTask}>New Task</button>
 
     </div>
 

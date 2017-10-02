@@ -1,4 +1,178 @@
+body {
+  font-family: 'Raleway';
+  background-image: url("./images/bridges2.jpg");
+  background-size: cover;
+}
+
+h1, h3 {
+  color: white;
+}
+
+p {
+  font-size: 20px;
+  color: white;
+}
+
+a {
+  color: white;
+  border-top: 50px;
+}
+
+a:hover {
+  color: #FF8E4F;
+}
+
 .activeNav {
-  color: #eaf6f8 !important;
-  background-color: #f68b1f !important;
+  color: white !important;
+  border-bottom: 2px #FF8E4F solid;
+  font-size: 20px;
+}
+
+.job {
+  color: white;
+  border: 2px solid white;
+  width: 70%;
+  padding: 10px 10px 1px 30px;
+  margin-top: 25px;
+}
+
+.jobWrapper {
+  padding: 1px 10px 1px 250px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 8px;
+  width: 100%;
+  border-radius: 3px;
+  display: block;
+  box-shadow: 43x 3px 2px #333;
+}
+
+.jobLink {
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.right {
+  float: right;
+}
+
+.appName {
+  font-size: 40px;
+}
+
+.appDescription {
+  font-size: 15px;
+}
+
+.welcome {
+  font-size: 40px;
+  color: white;
+  padding-top: 5%;
+}
+
+.links{
+  color: white;
+  font-family: 'Raleway';
+  font-size: 20px;
+}
+
+.links:hover {
+    color: black;
+    background-color: #FF8E4F !important;
+}
+
+.taskHeader {
+  text-align: center;
+}
+
+.taskFooter {
+  margin: auto;
+  width: 70%;
+}
+
+.taskBody {
+  padding:10px 10px 38px 34px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 8px;
+  width: 80%;
+  border-radius: 3px;
+  display: block;
+  box-shadow: 43x 3px 2px #333;
+}
+
+.taskContent {
+  padding:20px 10px 30px 10px;
+  border-bottom: 2px solid white;
+  margin: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.closebtn {
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.closebtn:hover {
+    color: #FF8E4F;
+}
+
+.homeContent {
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.centerForm {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.jobListH1 {
+  margin-top: 10%;
+}
+
+.searchForm {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.searchInput {
+  width: 500px;
+  margin-left: 30px;
+  font-family: 'Raleway';
+}
+
+.searchButton {
+  margin-left: 20px;
+  background-color: #FF8E4F;
+  border: none;
+  border-radius: 500px;
+  width: 15%;
+  font-family: 'Raleway';
+  color: white;
+}
+
+.taskFormWrapper {
+  margin-top: 3%;
+}
+
+.taskInput {
+  font-family: 'Raleway';
+  width: 500px;
+  margin-left: 90px;
+}
+
+.taskButton {
+  margin-left: 20px;
+  background-color: #FF8E4F;
+  border: none;
+  border-radius: 500px;
+  width: 15%;
+  font-family: 'Raleway';
+  color: white;
 }

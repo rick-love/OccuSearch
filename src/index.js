@@ -5,8 +5,6 @@ import App from './App';
 import Home from './Home';
 import Task from './Task';
 import Header from './Header'
-import { DB_CONFIG } from './Config/config';
-import firebase from 'firebase/app';
 import registerServiceWorker from './registerServiceWorker';
 import {
   BrowserRouter,
